@@ -14,15 +14,15 @@ public class Main {
         }
     }
 
-    public static Number[] findNumberInFibonacci(Number[] numbers){
+    public static void findNumberInFibonacci(Number[] numbers){
         long num1 = 0;
         long num2 = 1;
         int no = 0;
         int match = 0;
-        return findNumberInFibonacci(numbers, num1, num2, no, match);
+        findNumberInFibonacci(numbers, num1, num2, no, match);
     }
 
-    private static Number[] findNumberInFibonacci(Number[] numbers, long num1, long num2, int no, int match){
+    private static void findNumberInFibonacci(Number[] numbers, long num1, long num2, int no, int match){
         for (int i = 0; i < numbers.length; i++){
             if (numbers[i].getNumber() == num1){
                 numbers[i].setNoFibonacci(no);
@@ -36,6 +36,5 @@ public class Main {
             no++;
             findNumberInFibonacci(numbers, num1, num2, no, match);
         }
-        return numbers;
     }
 }
